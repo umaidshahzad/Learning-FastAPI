@@ -1,0 +1,5 @@
+fastapi[standard]
+sqlalchemy
+asyncpg
+pydantic
+python-dotenv
