@@ -60,7 +60,7 @@ async def get_by_id(user_id:int,db:AsyncSession=Depends(get_db)):
     return {"users":user}
 
 
-@app.put("/users/{user_id}")
+@app.put("/users/{user_id}")#this user_id must match with the parameter given to this function
 async def update_user(user_id:int,user_data:Update,db:AsyncSession=Depends(get_db)):
     query=select(User).where(user_id==User.id)
     result=await db.execute(query)
